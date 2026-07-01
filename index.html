@@ -44,11 +44,7 @@
     margin: 0;
     line-height: 1.6;
   }
-  .dl-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 10px;
-  }
+  .dl-list { display: flex; flex-direction: column; gap: 10px; }
   .dl-btn {
     display: flex;
     align-items: center;
@@ -79,90 +75,58 @@
     font-weight: 800;
     letter-spacing: .3px;
   }
-  .dl-ic-pdf   { background: #C8362F; }
-  .dl-ic-zip   { background: #7A5C2E; }
-  .dl-ic-excel { background: #1E7145; }
-  .dl-ic-hwp   { background: #2563B8; }
+  .ic-pdf  { background: #C8362F; }
+  .ic-pptx { background: #C25823; }
   .dl-meta { display: flex; flex-direction: column; min-width: 0; }
   .dl-name {
     font-size: 13px;
     font-weight: 600;
     color: #1F2937;
-    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    white-space: nowrap;
   }
-  .dl-size {
-    font-size: 11px;
-    color: var(--gray-text);
-    margin-top: 1px;
-  }
-  .dl-arrow { margin-left: auto; color: var(--navy); flex-shrink: 0; }
-  .note {
-    margin-top: 24px;
-    padding: 12px 14px;
-    background: #FFF8E6;
-    border: 1px solid #F0DCA0;
-    border-radius: 6px;
-    font-size: 12px;
-    color: #7A5C00;
-    line-height: 1.6;
-  }
+  .dl-size { font-size: 11px; color: var(--gray-text); margin-top: 1px; }
+  .dl-arrow { margin-left: auto; color: var(--navy); flex-shrink: 0; font-size: 16px; }
 </style>
 </head>
 <body>
 <div class="wrap">
-
   <div class="header">
     <p class="eyebrow">직무조사 자료실</p>
     <p class="dl-title">📂 직무조사 관련 자료 다운로드</p>
-    <p class="dl-sub">조사 시작 전, 아래 자료를 다운로드하여 작성 방법을 확인해 주시기 바랍니다.</p>
+    <p class="dl-sub">조사 시작 전, 아래 자료를 다운로드하여 내용을 확인해 주시기 바랍니다.</p>
   </div>
+  <div class="dl-list">
 
-  <div class="dl-grid">
-
-    <a class="dl-btn" href="assets/직무조사_가이드라인.pdf" download>
-      <div class="dl-icon dl-ic-pdf">PDF</div>
+    <a class="dl-btn" href="assets/'26~'30 중장기 경영전략체계(안).pdf" download>
+      <div class="dl-icon ic-pdf">PDF</div>
       <div class="dl-meta">
-        <div class="dl-name">직무조사 가이드라인</div>
-        <div class="dl-size">PDF 매뉴얼</div>
+        <div class="dl-name">'26~'30 중장기 경영전략체계(안)</div>
+        <div class="dl-size">PDF · 223 KB</div>
       </div>
       <div class="dl-arrow">↓</div>
     </a>
 
-    <a class="dl-btn" href="assets/직무조사_양식.zip" download>
-      <div class="dl-icon dl-ic-zip">ZIP</div>
+    <a class="dl-btn" href="assets/260227_SH공사_조직진단·인력분석 및 조직재설계_v1.0(준공검수용).pptx" download>
+      <div class="dl-icon ic-pptx">PPT</div>
       <div class="dl-meta">
-        <div class="dl-name">직무조사 양식 모음</div>
-        <div class="dl-size">ZIP 압축파일</div>
+        <div class="dl-name">260227_SH공사_조직진단·인력분석 및 조직재설계_v1.0</div>
+        <div class="dl-size">PPTX · 24 MB</div>
       </div>
       <div class="dl-arrow">↓</div>
     </a>
 
-    <a class="dl-btn" href="assets/직무목록.xlsx" download>
-      <div class="dl-icon dl-ic-excel">XLS</div>
+    <a class="dl-btn" href="assets/[SH] 중장기 경영전략 중간 진단 보고서.pdf" download>
+      <div class="dl-icon ic-pdf">PDF</div>
       <div class="dl-meta">
-        <div class="dl-name">직무목록</div>
-        <div class="dl-size">Excel 파일</div>
-      </div>
-      <div class="dl-arrow">↓</div>
-    </a>
-
-    <a class="dl-btn" href="assets/직무조사_안내문.hwp" download>
-      <div class="dl-icon dl-ic-hwp">HWP</div>
-      <div class="dl-meta">
-        <div class="dl-name">직무조사 안내문</div>
-        <div class="dl-size">한글 문서</div>
+        <div class="dl-name">[SH] 중장기 경영전략 중간 진단 보고서</div>
+        <div class="dl-size">PDF · 59 MB</div>
       </div>
       <div class="dl-arrow">↓</div>
     </a>
 
   </div>
-
-  <div class="note">
-    ⚠️ 현재 assets 폴더에는 테스트용 더미 파일이 들어있습니다. 실제 배포 전에 같은 파일명으로 진짜 파일을 교체해 주세요.
-  </div>
-
 </div>
 </body>
 </html>
