@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>직무조사 자료실</title>
+<style>
+  :root {
+    --navy: #1D3461;
+    --navy-light: #2E4A82;
+    --line: #D8DEE9;
+    --gray-text: #6B7280;
+    --bg: #F7F8FA;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: "Pretendard", "Malgun Gothic", -apple-system, sans-serif;
+    background: var(--bg);
+    color: #1F2937;
+  }
+  .wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 48px 20px 80px;
+  }
+  .header { margin-bottom: 28px; }
+  .eyebrow {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--navy-light);
+    letter-spacing: .06em;
+    margin: 0 0 8px;
+  }
+  .dl-title {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--navy);
+    margin: 0 0 6px;
+  }
+  .dl-sub {
+    font-size: 13px;
+    color: var(--gray-text);
+    margin: 0;
+    line-height: 1.6;
+  }
+  .dl-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 10px;
+  }
+  .dl-btn {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    padding: 14px 15px;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all .15s ease;
+  }
+  .dl-btn:hover {
+    border-color: var(--navy);
+    box-shadow: 0 3px 10px rgba(29,52,97,.12);
+    transform: translateY(-1px);
+  }
+  .dl-icon {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: .3px;
+  }
+  .dl-ic-pdf   { background: #C8362F; }
+  .dl-ic-zip   { background: #7A5C2E; }
+  .dl-ic-excel { background: #1E7145; }
+  .dl-ic-hwp   { background: #2563B8; }
+  .dl-meta { display: flex; flex-direction: column; min-width: 0; }
+  .dl-name {
+    font-size: 13px;
+    font-weight: 600;
+    color: #1F2937;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .dl-size {
+    font-size: 11px;
+    color: var(--gray-text);
+    margin-top: 1px;
+  }
+  .dl-arrow { margin-left: auto; color: var(--navy); flex-shrink: 0; }
+  .note {
+    margin-top: 24px;
+    padding: 12px 14px;
+    background: #FFF8E6;
+    border: 1px solid #F0DCA0;
+    border-radius: 6px;
+    font-size: 12px;
+    color: #7A5C00;
+    line-height: 1.6;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="header">
+    <p class="eyebrow">직무조사 자료실</p>
+    <p class="dl-title">📂 직무조사 관련 자료 다운로드</p>
+    <p class="dl-sub">조사 시작 전, 아래 자료를 다운로드하여 작성 방법을 확인해 주시기 바랍니다.</p>
+  </div>
+
+  <div class="dl-grid">
+
+    <a class="dl-btn" href="assets/직무조사_가이드라인.pdf" download>
+      <div class="dl-icon dl-ic-pdf">PDF</div>
+      <div class="dl-meta">
+        <div class="dl-name">직무조사 가이드라인</div>
+        <div class="dl-size">PDF 매뉴얼</div>
+      </div>
+      <div class="dl-arrow">↓</div>
+    </a>
+
+    <a class="dl-btn" href="assets/직무조사_양식.zip" download>
+      <div class="dl-icon dl-ic-zip">ZIP</div>
+      <div class="dl-meta">
+        <div class="dl-name">직무조사 양식 모음</div>
+        <div class="dl-size">ZIP 압축파일</div>
+      </div>
+      <div class="dl-arrow">↓</div>
+    </a>
+
+    <a class="dl-btn" href="assets/직무목록.xlsx" download>
+      <div class="dl-icon dl-ic-excel">XLS</div>
+      <div class="dl-meta">
+        <div class="dl-name">직무목록</div>
+        <div class="dl-size">Excel 파일</div>
+      </div>
+      <div class="dl-arrow">↓</div>
+    </a>
+
+    <a class="dl-btn" href="assets/직무조사_안내문.hwp" download>
+      <div class="dl-icon dl-ic-hwp">HWP</div>
+      <div class="dl-meta">
+        <div class="dl-name">직무조사 안내문</div>
+        <div class="dl-size">한글 문서</div>
+      </div>
+      <div class="dl-arrow">↓</div>
+    </a>
+
+  </div>
+
+  <div class="note">
+    ⚠️ 현재 assets 폴더에는 테스트용 더미 파일이 들어있습니다. 실제 배포 전에 같은 파일명으로 진짜 파일을 교체해 주세요.
+  </div>
+
+</div>
+</body>
+</html>
